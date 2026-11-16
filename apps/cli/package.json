@@ -1,0 +1,17 @@
+{
+  "name": "@nullfuse/cli",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "agent": "tsx --env-file=../../.env src/index.ts",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@nullfuse/agent": "workspace:*",
+    "@nullfuse/models": "workspace:*",
+    "@nullfuse/sandbox": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
+  }
+}

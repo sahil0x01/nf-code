@@ -185,6 +185,22 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
 
+  apps/cli:
+    dependencies:
+      '@nullfuse/agent':
+        specifier: workspace:*
+        version: link:../../packages/agent
+      '@nullfuse/models':
+        specifier: workspace:*
+        version: link:../../packages/models
+      '@nullfuse/sandbox':
+        specifier: workspace:*
+        version: link:../../packages/sandbox
+    devDependencies:
+      tsx:
+        specifier: ^4.23.15
+        version: 4.23.15
+
   packages/agent:
     dependencies:
       '@nullfuse/sandbox':
