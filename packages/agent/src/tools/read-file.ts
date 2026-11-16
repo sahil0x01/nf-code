@@ -34,19 +34,18 @@ export function createReadFileTool(sandbox: Sandbox) {
 
       const lines = content.split("\n");
       const from = startLine ?? 1;
-      const to = Math.min(
-        endLine ?? lines.length,
-        from + MAX_LINES - 1,
-        lines.length,
-      );
+      const lastWanted = Math.min(endLine ?? lines.length, lines.length);
+      const to = Math.min(lastWanted, from + MAX_LINES - 1);
+
 
       const numbered = lines
         .slice(from - 1, to)
         .map((line, i) => `${String(from + i).padStart(5)}  ${line}`)
         .join("\n");
 
+
       const truncated =
-        to < (endLine ?? lines.length)
+        to < lastWanted
           ? `\n[Output cut at line ${to} of ${lines.length}. Use startLine/endLine to read more.]`
           : "";
 

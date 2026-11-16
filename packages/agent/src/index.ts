@@ -1,3 +1,3 @@
 export { createReadFileTool } from "./tools/read-file.js";
-
-export const hello = "agent package works";
+export { createWriteFileTool } from "./tools/write-file.js";
+export { createEditFileTool } from "./tools/edit-file.js";
