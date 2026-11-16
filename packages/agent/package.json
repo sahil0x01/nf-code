@@ -7,5 +7,10 @@
   },
   "scripts": {
     "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@nullfuse/sandbox": "workspace:*",
+    "ai": "^7.0.173",
+    "zod": "^4.6.7"
   }
 }
